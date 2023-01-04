@@ -72,4 +72,29 @@
 
 // verPelis(peliculas);
 
+// EJERCICIO 20 crear funcion que recibe 2 palabras, comprobas si son anagramas o no, devolver true o false
+
+function limpiartexto(texto){
+    return texto
+            .replace(/[^\w]/gi, '') //limpio signos
+            .toLowerCase()          //formateo minuscula
+            .split('')              //separo
+            .sort()                 //ordeno alfabeticamente
+            .join('')               //junto
+}
+
+function anagramas(palabra1, palabra2){
+
+    let pal1 = limpiartexto(palabra1);
+    let pal2 = limpiartexto(palabra2);
+
+    if( pal1 === pal2 ){
+        return true
+    }else{
+        return false
+    } 
+    
+}
+
+console.log(anagramas('zsergio??)', 'RiesGo!'));    
 
